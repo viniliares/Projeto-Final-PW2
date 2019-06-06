@@ -1,0 +1,41 @@
+package br.com.etechoracio.feriadoapi.model;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import br.com.etechoracio.feriadoapi.Enum.MeuFeriadoEnum;
+@Entity
+@Table(name="")
+public class MeuFeriado {
+	@Id
+	@GeneratedValue
+	@Column(name = "")
+	private int id;
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "")
+	private String descricao;
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "")
+	private Date data;
+
+	
+
+	@Enumerated(EnumType.STRING)
+	@Column(name = "TP_ESPECIE")
+    private MeuFeriadoEnum feriado;
+	
+
+	
+	
+}

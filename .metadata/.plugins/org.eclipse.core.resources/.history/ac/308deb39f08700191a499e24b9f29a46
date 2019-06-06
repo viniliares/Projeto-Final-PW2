@@ -1,0 +1,29 @@
+package br.com.etechoracio.feriadoapi.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.etechoracio.feriadoapi.dao.MeuFeriadoDAO;
+import br.com.etechoracio.feriadoapi.model.MeuFeriado;
+
+@RestController
+@RequestMapping("/Feriado")
+public class MeuFeriadoController {
+	
+
+	@Autowired
+	private MeuFeriadoDAO dao;
+	
+
+	@GetMapping
+	public List<MeuFeriado> listar() {
+
+		return dao.findAll();
+
+	}
+
+}
